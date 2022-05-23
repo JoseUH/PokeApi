@@ -11,6 +11,12 @@
   overflow: hidden;
   .pokemon {
     width: 87vw;
+    transition: transform .7s ease-in-out;
+   
+    &:hover{
+      transform: rotate(10deg);
+      
+    }
   }
   input {
     border: none;

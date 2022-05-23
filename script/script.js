@@ -68,7 +68,7 @@ const getPokemons = async () => {
         const caractCartas$$ = document.createElement("p");
 
         nombreCartas$$.innerText = pokemon1JSON.name;
-        imgCartas$$.src = pokemon1JSON.sprites.other.dream_world.front_default;
+        imgCartas$$.src = pokemon1JSON.sprites.versions["generation-v"]["black-white"].animated.front_default;
         caractCartas$$.innerText = pokemon1JSON.id;
 
         imgCartas$$.classList.add("imgCartas");
@@ -87,35 +87,8 @@ const getPokemons = async () => {
   }
 };
 
-getPokemons();
+
+
+  getPokemons();
 
 miInput$$.addEventListener("input", getPokemons);
-
-
-
-function display(){
-
-      //Creo los elementos
-
-      let input$$ = document.getElementById('input')
-      let li = document.createElement('li')  
-      let btn= document.createElement("button")
-
-      //Darle cualidades
-
-      btn.innerText= "X"
-      btn.classList.add("kit");
-      li.innerText = input$$.value 
-
-      //hijos 
-
-      list.appendChild(li,list) 
-      list.appendChild(btn)
-      
-      //eliminar
-      
-      btn.addEventListener("click", function () {
-      const selectlis = document.querySelectorAll("li");
-      selectlis[selectliss.length - 1].remove();});
-      
-  }  
